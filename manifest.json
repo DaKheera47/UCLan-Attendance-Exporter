@@ -1,0 +1,25 @@
+{
+    "name": "UCLan Attendance Exporter",
+    "version": "0.0.1",
+    "description": "Export UCLan Attendance to an ICS file to import into another calendar app",
+    "manifest_version": 3,
+    "author": "Shaheer Sarfaraz",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "UCLan Attendance Exporter",
+        "default_icon": {
+            "32": "uclan_favicon_32.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://apps.uclan.ac.uk/*"
+            ],
+            "runat": "document_end",
+            "js": [
+                "index.js"
+            ]
+        }
+    ]
+}
