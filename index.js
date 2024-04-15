@@ -416,6 +416,9 @@ function exportAttendance() {
     for (let i = 0; i < classes.length; i++) {
         let classInfo = classes[i];
 
+        // remove the " (Full Yr at Preston)" from the code
+        classInfo.name = classInfo.name.replace(" (Full Yr at Preston)", "");
+
         cal.addEvent(
             classInfo.name,
             classInfo.teacher,
